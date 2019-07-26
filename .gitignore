@@ -1,0 +1,11 @@
+# FOLDERS
+dicom-images-test/
+dicom-images-train/
+dicom-images-test-old/
+dicom-images-train-old/
+
+# FILES
+
+./train-rle.csv
+./big_images.npy
+./meta.csv
