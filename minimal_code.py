@@ -7,6 +7,10 @@ image = np.memmap('./big_images.npy',mode='r',shape=(10675,1024,1024))
 meta = pd.read_csv('./meta.csv')
 
 def show_one_image_random(idx=None,annotation=True,force_pneumo=False):
+    '''
+    Display one random image if idx is not passed. Use annotation to display annotation as overllay.
+    Use force_pneumo to force the random choice to be a pneumothorax.
+    '''
     if not isinstance(idx,int):
         idx = np.random.randint(0, 10675)
         if force_pneumo:

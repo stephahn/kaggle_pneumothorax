@@ -26,7 +26,8 @@ def mask2rle(img, width, height):
             currentPixel+=1;
 
     return " ".join(rle)
-
+#todo modify rle2mask with rotation and transpose column
+#todo check that mask2rle of rle2mask, after modification is an identity
 def rle2mask(rle, width, height):
     mask= np.zeros(width* height)
     array = np.asarray([int(x) for x in rle.split()])
